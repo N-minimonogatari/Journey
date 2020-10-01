@@ -1,0 +1,155 @@
+/* 全体 */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+li {
+  list-style: none;
+}
+/* //全体 */
+/* ヘッダー */
+header {
+ height: 65px;
+ width: 100%;
+}
+ /* ヘッダーロゴ部分 */
+.header-logo {
+  font-family: "Cambria";
+  color: #FF6A6A;
+  font-size: 40px;
+  float: left;
+  padding: 13px 20px;
+ }
+/* //ヘッダーロゴ部分 */
+/* メニューバー部分 */
+* {
+  box-sizing: border-box;
+}
+ul li a {
+  letter-spacing: 2px;
+  font-family: "Bahnschrift";
+  display: block;
+  color: #FF6A6A;
+  margin-top: 15px;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 22px;
+}
+ul.menu li a:hover {
+  text-decoration: none;
+  color: sandybrown;
+  transition: .3s;
+}
+ul.menu {
+  display: flex;
+  float: right;
+}
+ul.menu > li > ul {
+  display: none;
+}
+ul.menu li:hover a + ul {
+  display: block;
+}
+/* //メニューバー部分 */
+/* //ヘッダー */
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 140px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/7);
+  height: 50px;
+  border-bottom: 3px solid #CEB590;
+  line-height: 50px;
+  font-size: 16px;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  font-family: 'Londrina Shadow', cursive;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+/*選択されているタブのコンテンツのみを表示*/
+#Vietnam:checked ~ #Vietnam_content,
+#Korea:checked ~ #Korea_content,
+#Taiwan:checked ~ #Taiwan_content,
+#Singapore:checked ~ #Singapore_content,
+#Malaysia:checked ~ #Malaysia_content,
+#Thailand:checked ~ #Thailand_content,
+#Laos:checked ~ #Laos_content {
+  display: block;
+}
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #CEB590;
+  color: #fff;
+}
+/*画像*/
+.tab_content_description {
+  text-align: center;
+}
+
+.tab_content_description img {
+  width: 30%;
+  height: 300px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* トップページに戻る部分 */
+#page_top {
+  width: 65px;
+  height: 70px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+#page_top a {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 55px;
+  color: #FF6A6A;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -20px;
+}
+/* //トップページに戻る部分 */
