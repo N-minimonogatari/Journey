@@ -41,10 +41,9 @@ input[name="slideshow"] {
 	width: 100%;
   height: 100%;
 	transform: translateX(100%);
-	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: transform .6s;
 }
 .slideContents section img {
-	max-width: 100%;
 	box-sizing: border-box;
 }
 /* 矢印 */
@@ -133,7 +132,6 @@ label {
 	transform: translateX(600px);
 }
 #switch1:checked ~ .slideContents #slide1 h1,
-#switch1:checked ~ .slideContents #slide1 p,
 #switch2:checked ~ .slideContents #slide2 h1,
 #switch2:checked ~ .slideContents #slide2 p,
 #switch3:checked ~ .slideContents #slide3 h1,
@@ -146,7 +144,6 @@ label {
 #switch3:checked ~ .slideContents #slide3 h1 {
 	transition-delay: .3s;
 }
-#switch1:checked ~ .slideContents #slide1 p,
 #switch2:checked ~ .slideContents #slide2 p,
 #switch3:checked ~ .slideContents #slide3 p {
 	transition-delay: .6s;
@@ -292,9 +289,6 @@ label {
 }
 
 /* 写真部分 */
-.container {
-  background:linear-gradient(0deg, #FF6A6A 50%, white 50%);
-}
 figure {
   position: relative;
   overflow: hidden;
@@ -317,6 +311,7 @@ figure:hover figcaption {
   bottom: 0;
 }
 .container {
+  background:linear-gradient(0deg, #FF6A6A 50%, white 50%);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -391,15 +386,14 @@ figure:hover figcaption {
 @media screen and (max-width: 768px) {
   .left-box li {
     font-size: 15px;
-    letter-spacing: 4px;
     padding-left: 10px;
-    padding-top: 650px;
+    padding-top: 700px;
   }
   .left-box img {
     left: 150px;
   }
   .right-box h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .right-box li,
   .right li {
@@ -438,47 +432,48 @@ figure:hover figcaption {
 /* iPhone */
 @media screen and (max-width: 479px) {
   .left-box li {
-    padding-top: 10px;
-    padding-left: none;
-    font-size: 10px;
+    display: none;
   }
   .left-box img {
-    width: 60%;
-    height: 60%;
-    left: 70px;
-    top: 100px;
+    left: 45px;
+    top: 200px;
+    height: 65%;
+    width: 135%;
   }
   .arrow,
   .arrow label {
-    height: 40%;
+    height: 90%;
   }
   .right-box h1 {
     padding-top: 250px;
-    font-size: 15px;
+    writing-mode: vertical-rl;
   }
   .right-box li {
     padding-left: 0px;
-    left: -50px;
+    left: -20px;
   }
   .left h1,
   #slide3 h1 {
-    font-size: 12px;
+    margin-left: 20px;
+    font-size: 15px;
   }
   .right li {
     padding-left: 0px;
-    left: -30px;
-    padding-top: 10px;
+    left: -20px;
+    padding-top: 30px;
   }
   .right img {
     height: 50%;
+    width: 100%;
     right: 40px;
-    top: 160px;
+    top: 270px;
   }
   .left p {
-    font-size: 20px;
+    font-size: 28px;
     letter-spacing: 2px;
-    line-height: 30px;
+    line-height: 50px;
     margin-left: 40px;
+    padding-top: 260px;
   }
   #slide3 li {
     top: 0px;
@@ -486,7 +481,7 @@ figure:hover figcaption {
     padding-right: 17px;
   }
   #slide3 video {
-    padding-left: 50px;
+    padding-left: 60px;
     padding-top: 70px;
     margin-bottom: 50px;
   }
